@@ -11,6 +11,8 @@ services:
     image: bytemark/webdav
     hostname: web
     restart: always
+    depends_on:
+      - proxy
     environment:
       AUTH_TYPE: Digest
       USERNAME: frodo
